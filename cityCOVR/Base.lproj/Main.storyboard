@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,121 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-EJ-f93">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVh-dX-yP8">
+                                <rect key="frame" x="48" y="385" width="288" height="45"/>
+                                <connections>
+                                    <action selector="fbSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvY-P5-ULr"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-IR-s9X">
+                                <rect key="frame" x="98" y="136" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-Hq-mMS">
+                                <rect key="frame" x="98" y="185" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIa-Vs-pzf">
+                                <rect key="frame" x="48" y="233" width="288" height="48"/>
+                                <connections>
+                                    <action selector="fbLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="id8-L1-uIt"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9j-pD-prD">
+                                <rect key="frame" x="188" y="355" width="131" height="43.5"/>
+                                <connections>
+                                    <action selector="okayBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dI-E3-GtN"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dG-3P-XQj">
+                                <rect key="frame" x="54" y="355" width="134" height="43.5"/>
+                                <connections>
+                                    <action selector="noAllowBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdi-Hu-rl5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-Zr-gAM">
+                                <rect key="frame" x="0.0" y="598" width="87" height="72"/>
+                                <connections>
+                                    <action selector="homeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8R-Ws-jUn"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imw-NR-mcL">
+                                <rect key="frame" x="95" y="598" width="93" height="72"/>
+                                <connections>
+                                    <action selector="rentClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxT-cP-d9I"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZE-JA-hlk">
+                                <rect key="frame" x="196" y="598" width="83" height="73"/>
+                                <connections>
+                                    <action selector="mapClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsg-jb-Mr7"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZX-zM-Ypt">
+                                <rect key="frame" x="287" y="598.5" width="88" height="70.5"/>
+                                <connections>
+                                    <action selector="settingsClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ix-oI-syt"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-yh-4eo">
+                                <rect key="frame" x="48" y="275" width="281" height="47"/>
+                                <connections>
+                                    <action selector="checkoutClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDD-iu-xc0"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHg-4O-40P">
+                                <rect key="frame" x="48" y="505" width="281" height="52"/>
+                                <connections>
+                                    <action selector="returnBtnClick1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4y-JI-922"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-gJ-D5O">
+                                <rect key="frame" x="48" y="462" width="281" height="52"/>
+                                <connections>
+                                    <action selector="returnBtnClick2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYf-Qu-5d4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-To-TCh">
+                                <rect key="frame" x="64" y="374" width="247" height="40"/>
+                                <connections>
+                                    <action selector="fbLogoutClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaA-Ot-RQL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="gE1-EJ-f93" id="Zmi-AB-3PT"/>
+                        <outlet property="checkoutBtn" destination="mbc-yh-4eo" id="f8j-Im-0f5"/>
+                        <outlet property="emailField" destination="2Nd-IR-s9X" id="Q7G-gz-xUx"/>
+                        <outlet property="fbLogoutBtn" destination="NnA-To-TCh" id="hNB-kS-bmE"/>
+                        <outlet property="homeBtn" destination="cqz-Zr-gAM" id="NxL-bo-7uC"/>
+                        <outlet property="logInFbBtn" destination="MIa-Vs-pzf" id="thD-Fn-eNI"/>
+                        <outlet property="mapBtn" destination="zZE-JA-hlk" id="3lG-1R-lcC"/>
+                        <outlet property="noAllowBtn" destination="3dG-3P-XQj" id="A9k-nh-qfp"/>
+                        <outlet property="okayBtn" destination="v9j-pD-prD" id="CIt-RQ-lk3"/>
+                        <outlet property="passwordField" destination="nBf-Hq-mMS" id="Wmw-BK-xSS"/>
+                        <outlet property="rentBtn" destination="Imw-NR-mcL" id="wPA-aS-xaj"/>
+                        <outlet property="returnBtn1" destination="UHg-4O-40P" id="KPv-nY-PhT"/>
+                        <outlet property="returnBtn2" destination="Bh8-gJ-D5O" id="aI5-HH-DyC"/>
+                        <outlet property="settingsBtn" destination="WZX-zM-Ypt" id="eXl-cO-tbr"/>
+                        <outlet property="signInFbBtn" destination="iVh-dX-yP8" id="9BJ-bM-LYj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="416" y="477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2.png" width="752" height="1334"/>
+    </resources>
 </document>
