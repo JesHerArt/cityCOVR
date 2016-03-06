@@ -40,6 +40,7 @@
     [passwordField resignFirstResponder];
 }
 
+
 //method needed to dismiss ketboard upon return key press on the keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -60,6 +61,9 @@
     [logInFbBtn setHidden:YES];
     [emailField setHidden:YES];
     [passwordField setHidden:YES];
+    
+    [emailField resignFirstResponder];
+    [passwordField resignFirstResponder];
     
     [okayBtn setHidden:NO];
     [noAllowBtn setHidden:NO];
